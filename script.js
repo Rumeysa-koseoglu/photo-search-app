@@ -6,6 +6,7 @@ const searchButton = document.querySelector("#searchButton");
 const clearButton = document.querySelector("#clearButton");
 const imageListWrapper = document.querySelector(".imagelist-wrapper");
 
+//by calling this function, we initialize the event listeners
 runEventListeners();
 
 function runEventListeners() {
@@ -13,14 +14,17 @@ function runEventListeners() {
     clearButton.addEventListener("click", clear);
 }
 
+//this function empties the contents of the search input when clear button is clicked
 function clear() {
     searchInput.value = ""
 }
 
 function search(e) {
     const searchInputvalue = searchInput.value.trim();
+    //gets each child element that contains the search results, deletes each child (images in search results)
     Array.from(imageListWrapper.children).forEach((child) => child.remove())
 
+    //it retrieves images from Unsplash API based on the search term entered by the user and adds them to the interface
     fetch(`https://api.unsplash.com/search/photos?query=${searchInputvalue}`, {
         method : "GET",
         headers : {
@@ -38,6 +42,7 @@ function search(e) {
     e.preventDefault();
 }
 
+//function that creates a card with the given image url, and adds it to the UI
 function addImageToUI(url) {
     const div =document.createElement("div");
     div.className = "card";
