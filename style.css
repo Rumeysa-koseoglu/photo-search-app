@@ -13,7 +13,7 @@
 }
 
 #searchInput {
-    width: 75%;
+    width: 65%;
     padding: 5px;
     border-radius: 5px;
     text-align: center;
@@ -21,6 +21,7 @@
 
 .button-wrapper {
     margin: 10px 0px;
+    text-align: center;
 }
 
 #searchButton {
@@ -31,6 +32,9 @@
     background-color: #464646;
     color: #fff;
     box-shadow: 1px 3px 5px lightgrey;
+    padding: 8px 25px;
+    font-size: 16px;
+    width: 150px;
 }
 
 #clearButton {
@@ -41,6 +45,9 @@
     background-color: #cc3838;
     color: #fff;
     box-shadow: 1px 3px 5px lightgrey;
+    padding: 8px 25px;
+    font-size: 16px;
+    width: 150px;
 }
 
 .imagelist-wrapper {
@@ -51,10 +58,47 @@
 
 }
 
-.imagelist-wrapper > .card{
-    margin:20px;
+.imagelist-wrapper>.card {
+    margin: 20px;
     border: 1px solid grey;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 3px 5px 8px grey;
+}
+
+/* mobile responsiveness */
+
+@media (max-width:768px) {
+
+    img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width:480px) {
+    
+    img {
+        width: 110px;
+        height: 110px;
+    }
+
+.button-wrapper {
+    margin: 10px 0px;
+    width: 78%;
+}
+
+#searchButton {
+    width: 90%;
+    margin-bottom: 7px;
+}
+
+#clearButton {
+    width: 90%;
+}
+
+#searchInput {
+    padding: 6px;
+}
+
 }
