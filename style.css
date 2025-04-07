@@ -50,6 +50,10 @@
     width: 150px;
 }
 
+.clearButton.hide{
+    display: none;
+}
+
 .imagelist-wrapper {
     display: flex;
     flex-direction: row;

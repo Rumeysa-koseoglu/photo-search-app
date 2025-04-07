@@ -12,11 +12,22 @@ runEventListeners();
 function runEventListeners() {
     form.addEventListener("submit", search);
     clearButton.addEventListener("click", clear);
+    searchButton.addEventListener("click",hideClearButton);
+}
+
+function hideClearButton(){
+    const value = searchInput.value.trim();
+    if(value !== "") {
+        clearButton.classList.remove("hide");
+    }else {
+        showAlert("warning","Please enter a word");
+    }
 }
 
 //this function empties the contents of the search input when clear button is clicked
 function clear() {
     searchInput.value = ""
+    clearButton.classList.add("hide")
 }
 
 function search(e) {
@@ -54,4 +65,19 @@ function addImageToUI(url) {
 
     div.appendChild(img);
     imageListWrapper.appendChild(div);
+}
+
+function showAlert(type, message) {
+    const body = document.querySelector("body")
+
+    const div = document.createElement("div");
+    div.className = `alert alert-${type}`;
+    div.role = "alert";
+    div.textContent = message;
+
+    body.appendChild(div);
+
+    setTimeout(() => {
+        div.remove();
+    }, 2000);
 }
