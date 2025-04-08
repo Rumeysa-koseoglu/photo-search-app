@@ -18,18 +18,20 @@ function runEventListeners() {
 }
 
 function hideClearButton(e) {
-    const value = searchInput.value.trim();
-    if (value !== "") {
-        clearButton.classList.remove("hide");
-    } else {
-        showAlert("warning", "Please enter a word");
-    }
+const value = searchInput.value.trim();
+if (value !== "") {
+    searchButton.classList.add("hide");
+    clearButton.classList.remove("hide");
+}else {
+    showAlert("warning", "Please enter a word");
+}
 }
 
 //this function empties the contents of the search input when clear button is clicked
 function clear() {
     searchInput.value = ""
-    clearButton.classList.add("hide")
+    clearButton.classList.add("hide");
+  searchButton.classList.remove("hide");
 }
 
 function search(e) {
@@ -83,3 +85,9 @@ function showAlert(type, message) {
         div.remove();
     }, 2000);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    clearButton.classList.add("hide"); // sayfa ilk açıldığında clear gizli olsun
+    searchButton.classList.remove("hide"); // search görünsün
+    searchInput.value = ""; // input temizlensin (opsiyonel ama önerilir)
+  });
