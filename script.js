@@ -23,7 +23,7 @@ if (value !== "") {
     searchButton.classList.add("hide");
     clearButton.classList.remove("hide");
 }else {
-    showAlert("warning", "Please enter a word");
+    showAlert("info", "Please enter a word");
 }
 }
 
