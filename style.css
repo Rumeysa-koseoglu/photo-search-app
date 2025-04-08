@@ -5,7 +5,6 @@ height: 100vh;
 
 .form-wrapper {
     width: 100%;
-    /* max-width: 500px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,7 +15,6 @@ height: 100vh;
 #form {
     width: 50%;
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -26,7 +24,6 @@ height: 100vh;
 #searchInput {
     width: 100%;
     padding: 10px;
-    /* border-radius: 60px; */
     text-align: center;
     background-color: transparent;
     border: none;
@@ -80,12 +77,12 @@ height: 100vh;
 
 .imagelist-wrapper > .card{
     margin:20px;
-    border-radius: 35px;
+    border-radius: 30px;
 }
 
 img {
-    border-radius: 35px;
-    width: 350px;
+    border-radius: 30px;
+    width: 400px;
     height: 400px;
 }
 
@@ -96,20 +93,18 @@ img {
 @media (max-width:768px) {
 
     img {
-        border-radius: 25px;
-        width: 200px;
+        border-radius: 20px;
+        width: 250px;
         height: 250px;
     }
     .imagelist-wrapper > .card{
-        border-radius: 25px;
+        border-radius: 20px;
     }
 
     #clearButton {
         width: 50px;
         border-radius: 50px;
         padding: 10px;
-        /* padding-bottom: 11px;
-        font-weight: 600; */
     }
 }
 
@@ -117,21 +112,19 @@ img {
 
 
     img {
-        border-radius: 25px;
+        border-radius: 20px;
         width: 150px;
         height: 150px;
     }
 
     .imagelist-wrapper > .card{
-        border-radius: 25px;
+        border-radius: 20px;
     }
 
     #clearButton {
         width: 50px;
         border-radius: 50px;
         padding: 10px;
-        /* padding-bottom: 9px;
-        font-weight: 600; */
     }
 
 }
