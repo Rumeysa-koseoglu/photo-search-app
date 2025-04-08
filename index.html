@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Search App</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="alertArea"></div>
 
     <div>
         <div class="form-wrapper">
             <form id="form">
-                <input id="searchInput" type="text" placeholder="Search something"/>
+                    <input id="searchInput" type="text" placeholder="Search something" />
+                <button id="searchButton" class="searchButton hide">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button id="clearButton" class="clearButton hide">Clear</button>
 
-                <div class="button-wrapper">
-                    <button id="searchButton">Search</button>
-                    <button id="clearButton" class="clearButton hide">Clear</button>
-                </div>
-            </form> 
+            </form>
         </div>
-
-        <div class="imagelist-wrapper">
-           
-        </div>
+                <div class="imagelist-wrapper"></div>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
+
 </html>
