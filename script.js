@@ -15,6 +15,16 @@ function runEventListeners() {
     form.addEventListener("submit", search);
     clearButton.addEventListener("click", clear);
     searchButton.addEventListener("click", hideClearButton);
+    searchInput.addEventListener("input", handleInputChange);
+}
+
+function handleInputChange() {
+    const value = searchInput.value.trim();
+    
+    if (value === "") {
+        clearButton.classList.add("hide");
+        searchButton.classList.remove("hide");
+    }
 }
 
 function hideClearButton(e) {
